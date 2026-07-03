@@ -131,7 +131,6 @@
     .hero {
       background: linear-gradient(135deg, var(--blue) 0%, #1a1a5e 100%);
       color: white;
-      text-align: center;
       padding: 60px 20px 50px;
       position: relative;
       overflow: hidden;
@@ -148,10 +147,44 @@
         rgba(255,255,255,0.03) 24px
       );
     }
-    .hero-flag {
-      font-size: 72px;
+    .hero-inner {
+      position: relative;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      text-align: left;
+    }
+    .hero-text { text-align: left; }
+    .hero-photo-wrap { text-align: center; }
+    .hero-photo {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.15);
       display: block;
-      margin-bottom: 16px;
+      margin: 0 auto;
+    }
+    .hero-photo-caption {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.65);
+      margin-top: 10px;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-text { text-align: center; }
+      .hero-photo-wrap { order: -1; }
+      .hero-photo { max-width: 280px; }
+    }
+    .hero-flag {
+      font-size: 60px;
+      display: block;
+      margin-bottom: 12px;
       animation: wave 2s ease-in-out infinite;
     }
     @keyframes wave {
@@ -167,25 +200,25 @@
       margin-bottom: 12px;
     }
     .hero h1 {
-      font-size: clamp(26px, 5vw, 52px);
+      font-size: clamp(26px, 4.2vw, 46px);
       font-weight: 900;
       line-height: 1.1;
-      max-width: 800px;
-      margin: 0 auto 16px;
+      margin: 0 0 16px;
     }
     .hero h1 span { color: var(--gold); }
     .hero-sub {
       font-size: 18px;
       color: rgba(255,255,255,0.8);
-      max-width: 600px;
-      margin: 0 auto 28px;
+      margin: 0 0 28px;
     }
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      justify-content: center;
       margin-top: 20px;
+    }
+    @media (max-width: 860px) {
+      .hero-badges { justify-content: center; }
     }
     .badge {
       background: rgba(255,255,255,0.12);
@@ -519,17 +552,25 @@
 
 <!-- ══════════════════════ HERO ══════════════════════ -->
 <section class="hero">
-  <span class="hero-flag">🚩</span>
-  <p class="hero-eyebrow">Cape Coral, Florida · July 4, 2026</p>
-  <h1>Florida's <span>Tallest Flagpole</span> Is Going Up.<br>Was It Worth <span>$450,000</span>?</h1>
-  <p class="hero-sub">Cape Coral is raising a 250-foot flagpole at Bernice Braden Park — the tallest in Florida. Construction is happening right now. The flag goes up July 4th. What do <em>you</em> think?</p>
-  <div class="hero-badges">
-    <span class="badge hot">🔴 LIVE: Flag raises July 4th at 2pm</span>
-    <span class="badge">📍 Bernice Braden Park, Cape Coral</span>
-    <span class="badge">250 feet tall</span>
-    <span class="badge">$420,000+ price tag</span>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-flag">🚩</span>
+      <p class="hero-eyebrow">Cape Coral, Florida · July 4, 2026</p>
+      <h1>Florida's <span>Tallest Flagpole</span> Is Going Up.<br>Was It Worth <span>$450,000</span>?</h1>
+      <p class="hero-sub">Cape Coral is raising a 250-foot flagpole at Bernice Braden Park — the tallest in Florida. Construction is happening right now. The flag goes up July 4th. What do <em>you</em> think?</p>
+      <div class="hero-badges">
+        <span class="badge hot">🔴 LIVE: Flag raises July 4th at 2pm</span>
+        <span class="badge">📍 Bernice Braden Park, Cape Coral</span>
+        <span class="badge">250 feet tall</span>
+        <span class="badge">$420,000+ price tag</span>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="/hero-pole.jpg" alt="Cape Coral's 250-foot flagpole rising against storm clouds at Bernice Braden Park" width="700" height="928" loading="eager">
+      <p class="hero-photo-caption">📸 On-site this week: the pole, dwarfing everything around it at Bernice Braden Park.</p>
+    </div>
   </div>
-  <div class="social-bar-hero" aria-label="Follow us on social media">
+  <div class="social-bar-hero" aria-label="Follow us on social media" style="position:relative; max-width:1180px; margin:32px auto 0; justify-content:center;">
     <a href="https://www.tiktok.com/@capecoralflagpole" target="_blank" rel="noopener" aria-label="TikTok" title="@capecoralflagpole on TikTok">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.15 0 5.71-2.55 5.71-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.25-1.48z"/></svg>
     </a>
@@ -594,6 +635,37 @@
       <p class="poll-total" id="pollTotal"></p>
       <p class="poll-voted-msg" id="pollVotedMsg"></p>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ COMMUNITY BOARD ══════════════════════ -->
+<section class="section" id="community-board" style="padding: 60px 20px; background:#f9fafb;">
+  <div style="max-width:800px; margin:0 auto;">
+    <h2 class="section-title">🗣️ Speak Your Mind — Cape Coral Community Board</h2>
+    <p class="section-sub">
+      This is your board. Love the flagpole, hate it, or just have a story about this city — say it here,
+      no filter, no gatekeeping. Report city spending, permitting delays, code enforcement double-standards,
+      contractor issues, or whatever else is on your mind. Everything's public and timestamped so nothing gets buried.
+    </p>
+    <script src="https://giscus.app/client.js"
+        data-repo="arthur7021/capecoralflagpole"
+        data-repo-id="R_kgDOTK_eGQ"
+        data-category="General"
+        data-category-id="DIC_kwDOTK_eGc4DAWPR"
+        data-mapping="specific"
+        data-term="Community Board"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
   </div>
 </section>
 
@@ -829,37 +901,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════ COMMUNITY BOARD ══════════════════════ -->
-<section class="section" id="community-board" style="padding: 60px 20px; background:#f9fafb;">
-  <div style="max-width:800px; margin:0 auto;">
-    <h2 class="section-title">🗣️ Cape Coral Community Board</h2>
-    <p class="section-sub">
-      See something? Say something. Report city spending, permitting delays, code enforcement double-standards,
-      contractor issues, or anything else Cape Coral residents should know about. Post it below — no login required
-      beyond a free GitHub account, and everything is public and timestamped so nothing gets buried.
-    </p>
-    <script src="https://giscus.app/client.js"
-        data-repo="arthur7021/capecoralflagpole"
-        data-repo-id="R_kgDOTK_eGQ"
-        data-category="General"
-        data-category-id="DIC_kwDOTK_eGc4DAWPR"
-        data-mapping="specific"
-        data-term="Community Board"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
   </div>
 </section>
 
