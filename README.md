@@ -1,1 +1,11 @@
-IyBDYXBlQ29yYWxGbGFncG9sZS5jb20KCkNvbW11bml0eSBwb2xsIGFuZCBpbmZvcm1hdGlvbiBzaXRlIGFib3V0IENhcGUgQ29yYWwncyAyNTAtZm9vdCBmbGFncG9sZSAtLSBGbG9yaWRhJ3MgdGFsbGVzdC4KCioqTGl2ZSBhdDoqKiBodHRwczovL2FydGh1cjcwMjEuZ2l0aHViLmlvL2NhcGVjb3JhbGZsYWdwb2xlLwoKU2l0ZSBjb3ZlcnM6Ci0gQ29tbXVuaXR5IHBvbGw6IFdhcyBpdCB3b3J0aCAkNDIwSys/Ci0gQ29zdCBicmVha2Rvd24KLSBQcm9qZWN0IHRpbWVsaW5lCi0gTGF0ZXN0IG5ld3MgY292ZXJhZ2UK
+# CapeCoralFlagpole.com
+
+Community poll and information site about Cape Coral's 250-foot flagpole -- Florida's tallest.
+
+**Live at:** https://arthur7021.github.io/capecoralflagpole/
+
+Site covers:
+- Community poll: Was it worth $420K+?
+- Cost breakdown
+- Project timeline
+- Latest news coverage
