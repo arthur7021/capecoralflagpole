@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://capecoralflagpole.com/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -79,12 +79,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://capecoralflagpole.com/blog/gulf-coast-forecast-episode-20.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://capecoralflagpole.com/blog/left-turn-report-episode-15.html</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -105,12 +99,6 @@
   <url>
     <loc>https://capecoralflagpole.com/blog/pub-sub-emergency-episode-5.html</loc>
     <lastmod>2026-07-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://capecoralflagpole.com/blog/publix-checkout-challenge-episode-19.html</loc>
-    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
